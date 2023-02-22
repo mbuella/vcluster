@@ -226,6 +226,9 @@ affinity: {}
 # PriorityClassName to apply to the vcluster statefulset
 priorityClassName: ""
 
+# change runtime class to anything other than runc
+# runtimeClassName: kata
+
 # Tolerations to apply to the vcluster statefulset
 tolerations: []
 

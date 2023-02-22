@@ -150,6 +150,9 @@ data:
             seccompProfile:
               type: RuntimeDefault
           {{- end }}
+          {{- if .Values.runtimeClassName }}
+          runtimeClassName: {{ .Values.runtimeClassName }}
+          {{- end }}
           containers:
             - name: coredns
               {{- if .Values.coredns.image }}

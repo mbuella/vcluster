@@ -42,6 +42,9 @@ spec:
       {{- else }}
       serviceAccountName: vc-{{ .Release.Name }}
       {{- end }}
+      {{- if .Values.runtimeClassName }}
+      runtimeClassName: {{ .Values.runtimeClassName }}
+      {{- end }}
       containers:
       - name: hostpath-mapper
         {{- if .Values.hostpathMapper.image }}
